@@ -354,18 +354,27 @@ html:not(.xmas-over) [data-after-xmas] { display: none !important; }
 .statement__name { color: var(--gold-500); }
 
 /* ==========================================================================
-   Skillset & Mindset
+   Skillset & Mindset: zwei Farbflächen mit großen Wörtern
    ========================================================================== */
-.duo { display: grid; gap: 3rem; margin-top: clamp(2rem, 1.5rem + 2vw, 3rem); }
-@media (min-width: 800px) { .duo { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); } }
-.duo__title { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem); line-height: 1; margin: 0 0 1rem; }
-.defs { list-style: none; border-top: 2px solid var(--ink-900); }
-.defs li { display: grid; gap: 0.1rem 1.25rem; padding: 0.85rem 0; border-bottom: 1px solid var(--line); }
-.defs strong { font-weight: 700; }
-.defs span { color: var(--ink-700); }
-@media (min-width: 560px) { .defs li { grid-template-columns: 10.5rem 1fr; } }
-.section--sand .defs li { border-bottom-color: var(--sand-line); }
-.closing { margin: clamp(2.5rem, 2rem + 3vw, 4.5rem) 0 0; font-weight: 700; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.375rem); line-height: 1.15; max-width: 24em; }
+.mindset__head { padding-block: clamp(4rem, 3rem + 4.5vw, 7rem) clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+.mindset { display: grid; }
+@media (min-width: 800px) { .mindset { grid-template-columns: 1fr 1fr; } }
+.mindset__half { padding: clamp(2.5rem, 2rem + 3vw, 5rem) var(--gutter); }
+@media (min-width: 800px) {
+  .mindset__half--skill { padding-left: max(var(--gutter), calc((100vw - var(--maxw)) / 2)); padding-right: clamp(2rem, 5vw, 5rem); }
+  .mindset__half--mind { padding-right: max(var(--gutter), calc((100vw - var(--maxw)) / 2)); padding-left: clamp(2rem, 5vw, 5rem); }
+}
+.mindset__half--skill { background: var(--sand); color: var(--ink-900); }
+.mindset__half--mind { background: var(--green-900); color: var(--on-dark); }
+.mindset__title { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(3rem, 2rem + 4vw, 5.5rem); line-height: 0.95; margin: 0; }
+.mindset__half--mind .mindset__title { color: var(--gold-500); }
+.mindset__sub { margin: 0.5rem 0 1.75rem; font-weight: 600; }
+.mindset__half--mind .mindset__sub { color: var(--on-dark-muted); }
+.mindset__list { list-style: none; }
+.mindset__list li { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem); line-height: 1.1; padding: 0.4rem 0; border-top: 1px solid rgba(18, 23, 20, 0.22); }
+.mindset__half--mind .mindset__list li { border-top-color: var(--line-dark); }
+.closing-big { margin: 0; padding-block: clamp(3rem, 2rem + 5vw, 6.5rem); font-size: clamp(2.25rem, 1.2rem + 4.6vw, 5.25rem); line-height: 1; max-width: 16em; text-wrap: balance; }
+.closing-big span { color: var(--green-700); }
 
 /* ==========================================================================
    Bundesliga-Besuch + Spielerkarten
@@ -465,25 +474,36 @@ html:not(.xmas-over) [data-after-xmas] { display: none !important; }
 }
 
 /* ==========================================================================
-   Weihnachtsaktion
+   Weihnachtsaktion: Gutschein vor dem Baum, ruhig und warm
    ========================================================================== */
-.xmas { background: var(--green-950); color: var(--on-dark); }
-.xmas__grid { display: grid; gap: clamp(2.5rem, 1.5rem + 4vw, 5rem); align-items: start; }
-@media (min-width: 900px) { .xmas__grid { grid-template-columns: 1.1fr 0.9fr; } }
-.xmas__deadline { margin: 1rem 0 0; font-weight: 600; color: var(--on-dark-muted); }
+.xmas { background: linear-gradient(180deg, var(--green-950), var(--green-900)); color: var(--on-dark); }
+.xmas__grid { display: grid; gap: clamp(2.5rem, 1.5rem + 4vw, 5rem); align-items: center; }
+@media (min-width: 900px) { .xmas__grid { grid-template-columns: 1fr 1fr; } }
+.xmas__label { margin: 0 0 1rem; font-weight: 700; color: var(--gold-400); }
+.xmas__for { margin: 0; font-weight: 600; }
 .steps { list-style: none; margin: 2.5rem 0 0; border-top: 1px solid var(--line-dark); counter-reset: step; }
 .steps li { display: grid; grid-template-columns: 2.75rem 1fr; gap: 0.5rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line-dark); color: var(--on-dark-muted); }
 .steps li::before { counter-increment: step; content: counter(step); font-family: var(--font-display); font-size: 1.75rem; line-height: 1; color: var(--gold-500); }
 .steps strong { display: block; color: var(--on-dark); font-weight: 700; font-size: 1.125rem; }
 
-.voucher { background: var(--paper); color: var(--ink-900); border-radius: var(--radius); padding: clamp(1.5rem, 1rem + 2vw, 2.5rem); max-width: 460px; }
-.voucher__brand { font-family: var(--font-display); text-transform: uppercase; font-size: 1.25rem; color: var(--green-900); margin-bottom: 1.5rem; }
-.voucher__title { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem); line-height: 0.95; color: var(--green-900); margin: 0 0 1.25rem; }
-.voucher__for { margin: 0 0 1.75rem; color: var(--ink-500); }
-.voucher__for span { display: inline-block; min-width: 10rem; border-bottom: 1px solid var(--ink-500); }
-.voucher__foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.9375rem; }
+.voucher-scene { position: relative; padding-top: 4.5rem; }
+.voucher-scene__tree { position: absolute; z-index: 0; right: 8%; top: 0; width: 24%; max-width: 110px; height: auto; }
+@media (min-width: 900px) {
+  .voucher-scene { display: flex; align-items: flex-end; justify-content: center; padding-top: 0; }
+  .voucher-scene__tree { position: relative; order: 2; right: auto; top: auto; flex: none; width: 40%; max-width: 230px; margin-left: -2.75rem; }
+  .voucher { flex: 0 1 420px; }
+}
+.voucher { position: relative; z-index: 1; margin: 0; max-width: 440px; margin-inline: auto; padding: clamp(1.5rem, 1rem + 2vw, 2.25rem); background: var(--paper); color: var(--ink-900); border-radius: var(--radius); overflow: hidden; }
+.voucher__ribbon { position: absolute; top: 0; bottom: 0; right: 13%; width: 20px; background: var(--gold-500); }
+.voucher__content { position: relative; padding-right: 24%; }
+.voucher__brand { font-family: var(--font-display); text-transform: uppercase; font-size: 1.25rem; color: var(--green-900); margin-bottom: 1rem; }
+.voucher__label { margin: 0; font-weight: 700; font-size: 0.9375rem; color: var(--green-700); }
+.voucher__title { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.1rem); line-height: 0.95; color: var(--green-900); margin: 0.35rem 0 0.9rem; }
+.voucher__for { margin: 0 0 1.5rem; color: var(--ink-500); }
+.voucher__for span { display: inline-block; min-width: 8.5rem; border-bottom: 1px solid var(--ink-500); }
+.voucher__foot { position: relative; margin-right: 24%; display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.35; }
 .voucher__foot strong { display: block; }
-.voucher__price { font-family: var(--font-display); font-size: 2.5rem; line-height: 1; color: var(--green-900); }
+.voucher__price { font-family: var(--font-display); font-size: 2.25rem; line-height: 1; color: var(--green-900); }
 
 /* ==========================================================================
    Preis & Anmeldung
