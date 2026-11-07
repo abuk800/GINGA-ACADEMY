@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /flyer/
+
+Sitemap: https://freistil-kids.example/sitemap.xml
