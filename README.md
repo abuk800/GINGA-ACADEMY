@@ -10,7 +10,7 @@ keine externen Anfragen. Läuft auf jedem Webspace und jedem Static-Hoster (Netl
 
 | Datei | Inhalt |
 |---|---|
-| `index.html` | Startseite: Weihnachts-Banner, Hero, Vertrauensleiste, Problem, Philosophie, Skillset & Mindset, Profi-Besuch, Ablauf, Paket, Team, Sicherheit, Weihnachtsaktion, Preis, FAQ, Abschluss |
+| `index.html` | Startseite: Weihnachts-Banner, Hero, Vertrauensleiste, Problem, Philosophie, Skillset & Mindset, Bundesliga-Besuch (Spielerkarten), Ablauf, Paket, Team, Sicherheit, Weihnachtsaktion, Preis, FAQ, Abschluss |
 | `ueber-uns.html` | Wer wir sind, Mission, Vergleich, der brasilianische Gedanke, Vision, Team |
 | `anmeldung.html` | Anmeldung in 3 Schritten (Anmeldung → weitere Angaben → Bestätigung), wird automatisch zur Warteliste |
 | `gutschein.html` | Gutschein-Kauf (149 € pro Gutschein, Name optional, Widmung) |
@@ -65,7 +65,7 @@ Noch offen:
 - **Camp:** `[ADRESSE]`, `[UHRZEITEN]` / `[UHRZEIT]` (Tagesablauf), `[TAG 1–4]` (Programm), `[Details zur Verpflegung]`, `[ANFAHRT & PARKEN]`, `[AUSWEICHPLAN]` bei Unwetter
 - **Preis:** `[REGULÄRER PREIS]` / `[PREIS]`. Freie Plätze (`[ANZAHL PLÄTZE]`) werden über `freeSpots` in `config.js` gesteuert.
 - **Geschenk:** `[Details zu den Tickets folgen]`
-- **Profi-Besuch:** freigegebenes Foto von Derrick Köhn, `[Tag & Uhrzeit des Besuchs]`. Weitere Gäste ergänzt ihr, indem ihr eine Teaser-Karte durch eine Karte mit `guest-card--confirmed` ersetzt (siehe Kommentar im HTML).
+- **Bundesliga-Besuch:** Derrick Köhns Foto (`assets/img/derrick-koehn.webp`) ist nur 195×256 px groß und wurde 2× hochskaliert. Für scharfe Karten bitte eine größere Version als freigestelltes PNG/WebP austauschen. Dazu `[Tag & Uhrzeit der Besuche]`. Weitere Gäste: eine `fut--tba`-Karte in `index.html` durch eine Karte wie die von Derrick ersetzen (siehe Kommentar im HTML).
 - **Team:** `[Rolle]`, Haltungssatz und Kurzvorstellung für Kevin Atakora und Michi Köhn. Die vorgeschlagenen Sätze sind nur Beispiele und müssen freigegeben werden. Dazu Fotos.
 - **Sicherheit:** Gruppengröße, Erste Hilfe, erweitertes Führungszeugnis, Versicherung. Nur bestätigte Punkte zeigen.
 - **Gutschein:** Gültigkeit, Regelung bei ausgebuchtem Camp, Versandzeitpunkt des PDFs
@@ -75,7 +75,7 @@ Noch offen:
 
 ### Fotos einsetzen
 
-An jeder Stelle mit Foto-Platzhalter steht im HTML ein auskommentiertes `<img>`-Beispiel. Fotos am besten als **WebP** (Hero ca. 960×1200 px,
+Eingebaut sind bisher: Hero (`hero-kind-schuss.webp`), Problem-Abschnitt (`kind-spielszene.webp`), Über uns (`freestyle-trick.webp`) und Derrick Köhn. Bei den Team-Fotos steht im HTML ein auskommentiertes `<img>`-Beispiel. Fotos am besten als **WebP** (Hero ca. 960×1200 px,
 Team 600×600 px, unter 200 KB), mit Alt-Text und mit `width`/`height`-Angaben einbinden. Nur Personen zeigen, deren Freigabe vorliegt.
 
 ### Echte Stimmen nach dem ersten Camp

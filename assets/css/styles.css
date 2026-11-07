@@ -517,18 +517,20 @@ html:not(.xmas-over) [data-after-xmas] { display: none !important; }
 }
 .hero__facts .icon { width: 18px; height: 18px; color: var(--gold-400); }
 .hero__visual { position: relative; }
-.hero__photo { aspect-ratio: 4 / 5; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); transform: rotate(1.5deg); }
+.hero__photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 42%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); transform: rotate(1.5deg); background: var(--green-800); }
 .hero__trail {
-  position: absolute; z-index: 2; pointer-events: none;
+  position: absolute; z-index: 0; pointer-events: none;
   left: -18%; top: -6%; width: 125%; height: auto;
   color: var(--gold-500);
 }
+.hero__trail--top { z-index: 2; }
+.hero__photo { position: relative; z-index: 1; }
 .hero__trail path.trail { stroke-dasharray: 6 10; }
 .hero__badge {
   position: absolute; z-index: 3;
   left: -0.5rem; bottom: 1.5rem;
   display: flex; align-items: center; gap: 0.75rem;
-  max-width: 270px;
+  max-width: 310px;
   padding: 0.85rem 1rem;
   border-radius: var(--radius);
   background: var(--sand-50);
@@ -1139,7 +1141,8 @@ html:not(.xmas-over) [data-after-xmas] { display: none !important; }
 
 .story { display: grid; gap: clamp(2rem, 1rem + 4vw, 4rem); align-items: center; }
 @media (min-width: 900px) { .story { grid-template-columns: 1fr 1fr; } }
-.story__photo { aspect-ratio: 5 / 4; }
+.story__figure { margin: 0; }
+.story__photo { display: block; width: 100%; max-width: 540px; margin-inline: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
 .story p { font-size: var(--fs-lg); color: rgba(247, 242, 232, 0.88); }
 
 /* ==========================================================================
@@ -1310,3 +1313,129 @@ html:not(.xmas-over) [data-after-xmas] { display: none !important; }
 }
 .field label.choice { font-weight: 450; }
 .field label.choice strong { font-weight: 750; }
+
+/* ==========================================================================
+   Problem-Sektion: Foto mit überlappender Gedanken-Karte
+   ========================================================================== */
+.problem__visual { position: relative; }
+.problem__photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 50%; border-radius: var(--radius-lg); box-shadow: var(--shadow); background: var(--sand-200); }
+.problem__visual .thought { position: relative; z-index: 1; margin: -3.25rem 1rem 0; }
+
+/* ==========================================================================
+   Bundesliga-Besuch: Spielerkarten im FIFA-Stil
+   ========================================================================== */
+.pro__head { display: grid; gap: clamp(1.5rem, 1rem + 2vw, 2.5rem); align-items: end; margin-bottom: clamp(2.5rem, 2rem + 3vw, 4rem); }
+@media (min-width: 900px) { .pro__head { grid-template-columns: 1.25fr 0.75fr; } }
+.pro__head .h2 { margin-bottom: 1rem; }
+.pro__head .checklist { margin-top: 0; }
+.pro__when { margin: 0 0 1.5rem; color: rgba(247, 242, 232, 0.7); }
+
+.fut-row { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 0.5rem + 1.5vw, 2rem); }
+@media (max-width: 899px) {
+  .fut-row {
+    display: flex; gap: 1rem; overflow-x: auto;
+    margin-inline: calc(var(--gutter) * -1); padding: 1rem var(--gutter) 2rem;
+    scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .fut-row::-webkit-scrollbar { display: none; }
+  .fut-wrap { flex: 0 0 min(70vw, 290px); scroll-snap-align: start; }
+}
+.fut-note { margin: 0.5rem 0 0; font-size: var(--fs-sm); color: rgba(247, 242, 232, 0.75); text-align: center; }
+
+.fut-wrap {
+  --fut-shape: polygon(0 4.5%, 9% 0, 39% 0, 50% 2.2%, 61% 0, 91% 0, 100% 4.5%, 100% 88%, 50% 100%, 0 88%);
+  container-type: inline-size;
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s var(--ease);
+}
+.fut-wrap:hover { transform: translateY(-6px); }
+
+.fut {
+  position: relative; aspect-ratio: 5 / 7; padding: 5px;
+  clip-path: var(--fut-shape);
+  background: var(--fut-rim);
+  color: var(--fut-ink);
+}
+.fut__inner {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end;
+  height: 100%; overflow: hidden;
+  clip-path: var(--fut-shape);
+  background: var(--fut-face);
+}
+.fut--gold {
+  --fut-ink: #3a2706; --fut-accent: #3a2706;
+  --fut-rim: linear-gradient(145deg, #fff3b8 0%, #e7b63c 28%, #9a6c10 52%, #f0cb66 76%, #fff1b0 100%);
+  --fut-face:
+    radial-gradient(120% 80% at 70% 12%, rgba(255, 255, 255, 0.55), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.07) 0 10px, transparent 10px 22px),
+    linear-gradient(165deg, #f8dc7c 0%, #e9b73c 45%, #d4a022 72%, #f2cb5e 100%);
+}
+.fut--tba {
+  --fut-ink: #f7f2e8; --fut-accent: #f6c544;
+  --fut-rim: linear-gradient(145deg, #6f8f7a, #1d5a3a 30%, #0a2a1b 55%, #3c7a58 80%, #7a9a85);
+  --fut-face:
+    radial-gradient(110% 70% at 70% 10%, rgba(246, 197, 68, 0.2), transparent 60%),
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.035) 0 10px, transparent 10px 22px),
+    linear-gradient(170deg, #14482d, #0a2a1b 70%, #0d3322);
+}
+
+/* linke Spalte (wie Wertung/Position/Land bei FIFA) */
+.fut__rail {
+  position: absolute; z-index: 2; left: 7%; top: 11%; width: 21%;
+  display: flex; flex-direction: column; align-items: center; gap: 3cqw;
+  color: var(--fut-accent); text-align: center;
+}
+.fut__num { font-family: var(--font-display); font-size: 2.75rem; font-size: 19cqw; line-height: 0.9; }
+.fut__league { font-size: 0.6rem; font-size: max(8px, 2.9cqw); font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; }
+.fut__sep { width: 70%; height: 2px; border-radius: 2px; background: currentColor; opacity: 0.55; }
+.fut__rail .icon { width: 1.5rem; height: 1.5rem; width: 8.5cqw; height: 8.5cqw; stroke-width: 1.6; }
+
+/* Spielerbild bzw. Silhouette */
+.fut__img, .fut__sil {
+  position: absolute; z-index: 1; right: 2%; top: 10%;
+  height: 57%; width: auto; max-width: 74%;
+  object-fit: contain; object-position: 50% 0;
+}
+.fut__img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  filter: drop-shadow(0 6px 8px rgba(60, 35, 0, 0.35));
+}
+.fut__sil { color: rgba(247, 242, 232, 0.1); aspect-ratio: 100 / 110; right: 6%; top: 11%; }
+.fut__q { position: absolute; z-index: 2; right: 25%; top: 16%; font-family: var(--font-display); font-size: 6rem; font-size: 36cqw; line-height: 1; color: var(--fut-accent); text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); }
+
+.fut__flag {
+  position: absolute; z-index: 3; right: 6%; top: 5%;
+  padding: 0.25em 0.7em; border-radius: 99px;
+  font-size: 0.6875rem; font-size: max(9px, 3.4cqw); font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.2;
+}
+.fut--gold .fut__flag { background: var(--ink-900); color: var(--gold-400); }
+.fut--tba .fut__flag { background: var(--gold-500); color: var(--ink-900); }
+
+/* unterer Block: Name, Rolle, „Werte“ */
+.fut__foot { position: relative; z-index: 2; padding: 0 9% 17cqw; text-align: center; }
+.fut__name { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; font-size: 9.2cqw; line-height: 1; text-transform: uppercase; letter-spacing: 0.01em; margin: 0; }
+.fut--tba .fut__name { font-size: 1.25rem; font-size: 8cqw; }
+.fut__role { margin: 0.25em 0 0; font-size: 0.75rem; font-size: max(10px, 3.9cqw); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; opacity: 0.8; }
+.fut__perks {
+  list-style: none; display: flex; justify-content: space-between; gap: 2cqw;
+  margin: 3.5cqw 0 0; padding-top: 3.5cqw;
+  border-top: 2px solid color-mix(in srgb, var(--fut-ink) 35%, transparent);
+}
+.fut__perks li { display: flex; flex-direction: column; align-items: center; gap: 1cqw; flex: 1; font-size: 0.6875rem; font-size: max(10px, 3.8cqw); font-weight: 800; line-height: 1.1; }
+.fut__perks .icon { width: 1.25rem; height: 1.25rem; width: 6.5cqw; height: 6.5cqw; stroke-width: 1.8; }
+.fut--tba .fut__perks { opacity: 0.55; }
+
+/* Glanz (nur Goldkarte) */
+.fut--gold .fut__inner::after {
+  content: ''; position: absolute; inset: -20% -60%; z-index: 4; pointer-events: none;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.55) 50%, transparent 58%);
+  mix-blend-mode: soft-light;
+  transform: translateX(-60%);
+  transition: transform 0.9s var(--ease);
+}
+.fut-wrap:hover .fut--gold .fut__inner::after { transform: translateX(60%); }
+.fut-row.is-in .fut--gold .fut__inner::after { animation: fut-shine 1.5s 0.6s var(--ease) 1 backwards; }
+@keyframes fut-shine { from { transform: translateX(-60%); } to { transform: translateX(60%); } }
+@media (prefers-reduced-motion: reduce) { .fut-wrap:hover { transform: none; } }
