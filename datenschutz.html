@@ -17,7 +17,8 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/anton-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js" defer></script>
@@ -25,45 +26,19 @@
 <body data-root="">
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9z"/></symbol>
-  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8M12 8v13M12 8S10.5 3.5 8 3.5A2.25 2.25 0 0 0 8 8M12 8s1.5-4.5 4-4.5A2.25 2.25 0 0 1 16 8"/></symbol>
-  <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8.5 3 3 6l2 4.5 2-.8V21h10V9.7l2 .8L21 6l-5.5-3a3.5 3.5 0 0 1-7 0z"/></symbol>
-  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m12 7.5 3.4 2.5-1.3 4h-4.2l-1.3-4zM12 7.5V3.2M15.4 10l4.2-1.4M14.1 14l2.6 3.6M9.9 14l-2.6 3.6M8.6 10 4.4 8.6"/></symbol>
-  <symbol id="i-food" viewBox="0 0 24 24"><path d="M12 7c-1.5-1.2-5-1.6-6.6.8C3.3 11 5 16.6 7.6 19.3c1.4 1.5 2.9 1.4 4.4.7 1.5.7 3 .8 4.4-.7 2.6-2.7 4.3-8.3 2.2-11.5C17 5.4 13.5 5.8 12 7z"/><path d="M12 7c0-2 1-3.5 3-4"/></symbol>
-  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 13.9-1.5 7.1 5-2.6 5 2.6-1.5-7.1"/><path d="m12 6.2.9 1.8 2 .3-1.4 1.4.3 2-1.8-.9-1.8.9.3-2-1.4-1.4 2-.3z"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.7 2.7L16.2 9.5"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21s8-3.6 8-10V5.4L12 3 4 5.4V11c0 6.4 8 10 8 10z"/><path d="m8.8 11.8 2.2 2.2 4.2-4.3"/></symbol>
-  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
-  <symbol id="i-user-check" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 11l2 2 4-4"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.8 2 2 0 0 1 3.1 1.6h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.4a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
-  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
-  <symbol id="i-curve" viewBox="0 0 24 24"><path d="M3 18c3-9 7 3 10-5s5-7 8-7"/><circle cx="20" cy="6" r="1.6"/><path d="M3 21h4"/></symbol>
-  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
-  <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9"/></symbol>
-  <symbol id="i-photo" viewBox="0 0 24 24"><path d="M4 7h3l2-2.5h6L17 7h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9.2-9.3C1.6 7.2 3.9 4 7.2 4c2 0 3.4 1.1 4.8 2.8C13.4 5.1 14.8 4 16.8 4c3.3 0 5.6 3.2 4.4 6.7C19.5 15.4 12 20 12 20z"/></symbol>
-  <symbol id="i-firstaid" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4h6v2M12 10v6M9 13h6"/></symbol>
-  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
-  <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0zM12 12v6.5a2 2 0 0 1-4 0M12 3v0"/></symbol>
-  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.1"/></symbol>
-  <symbol id="i-whistle" viewBox="0 0 24 24"><circle cx="9" cy="14" r="5"/><path d="M12.5 10.5 21 7v4l-6.5 2.4M9 14h.01"/></symbol>
-  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 2.5 6.5 9H9l-4 5.5h3L4 20h16l-4-5.5h3L15 9h2.5zM12 20v2"/></symbol>
-  <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3L12 17.1l-5.6 3 1.1-6.3L2.9 9.4l6.3-.9z"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8M12 8v13M12 8S10.5 3.5 8 3.5A2.25 2.25 0 0 0 8 8M12 8s1.5-4.5 4-4.5A2.25 2.25 0 0 1 16 8"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></symbol>
 </svg>
 
 <div class="xmas-banner" id="xmas-banner" hidden data-xmas>
   <div class="container xmas-banner__inner">
-    <svg class="icon xmas-banner__star" aria-hidden="true"><use href="#i-gift"/></svg>
     <p>Das Geschenk, das nicht im Regal verstaubt: ein Platz im FREISTIL KIDS Ostercamp für 149&nbsp;€. <a href="gutschein.html">→&nbsp;Gutschein sichern</a></p>
     <button class="xmas-banner__close" type="button" aria-label="Hinweis schließen"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
   </div>
@@ -71,15 +46,7 @@
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="logo" href="index.html" aria-label="FREISTIL KIDS – zur Startseite">
-      <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-        <path d="M3 40c7-1 12-5 16-10" fill="none" stroke="#f2b51d" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M6 30c4-1 7-3 9.5-6" fill="none" stroke="#f2b51d" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
-        <path d="M11 44c5-1 9-3 12-6" fill="none" stroke="#f2b51d" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
-        <circle cx="31" cy="18" r="13" fill="none" stroke="currentColor" stroke-width="3.2"/>
-        <path d="m31 11.5 5.5 4-2.1 6.5h-6.8l-2.1-6.5z" fill="currentColor"/>
-        <path d="M31 11.5V5.5M36.5 15.5l5.7-1.9M34.4 22l3.5 4.9M27.6 22l-3.5 4.9M25.5 15.5l-5.7-1.9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
+    <a class="logo" href="index.html" aria-label="FREISTIL KIDS, zur Startseite">
       <span class="logo__word">Freistil <span class="logo__kids">Kids</span></span>
     </a>
     <nav class="nav" aria-label="Hauptnavigation">
@@ -128,7 +95,7 @@
   <section class="section section--paper section--tight">
     <div class="container">
       <div class="prose">
-        <p class="legal-note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Platzhalter: Der verbindliche Rechtstext wird vom Veranstalter <span class="ph">[NAME DER UG]</span> geliefert. Die Gliederung unten dient nur als Orientierung und ersetzt keine Rechtsberatung.</span></p>
+        <p class="legal-note"><span>Platzhalter: Der verbindliche Rechtstext wird vom Veranstalter <span class="ph">[NAME DER UG]</span> geliefert. Die Gliederung unten dient nur als Orientierung und ersetzt keine Rechtsberatung.</span></p>
 
         <h2>Kurz &amp; ehrlich</h2>
         <p>Diese Website setzt keine Tracking- oder Werbe-Cookies ein und lädt keine Inhalte von Drittanbietern. Schriftarten sind lokal eingebunden, es werden also keine Daten an Google oder andere Font-Dienste übertragen. Im Browser speichern wir lediglich, ob ihr den Datenschutz-Hinweis bzw. das Weihnachts-Banner geschlossen habt (Local Storage, technisch notwendig).</p>
@@ -157,15 +124,7 @@
   <div class="container">
     <div class="footer__grid">
       <div>
-        <a class="logo" href="index.html" aria-label="FREISTIL KIDS – zur Startseite">
-      <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-        <path d="M3 40c7-1 12-5 16-10" fill="none" stroke="#f2b51d" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M6 30c4-1 7-3 9.5-6" fill="none" stroke="#f2b51d" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
-        <path d="M11 44c5-1 9-3 12-6" fill="none" stroke="#f2b51d" stroke-width="2.4" stroke-linecap="round" opacity=".7"/>
-        <circle cx="31" cy="18" r="13" fill="none" stroke="currentColor" stroke-width="3.2"/>
-        <path d="m31 11.5 5.5 4-2.1 6.5h-6.8l-2.1-6.5z" fill="currentColor"/>
-        <path d="M31 11.5V5.5M36.5 15.5l5.7-1.9M34.4 22l3.5 4.9M27.6 22l-3.5 4.9M25.5 15.5l-5.7-1.9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-      </svg>
+        <a class="logo" href="index.html" aria-label="FREISTIL KIDS, zur Startseite">
       <span class="logo__word">Freistil <span class="logo__kids">Kids</span></span>
     </a>
         <p class="footer__claim">Mut ist trainierbar. Das Fußballcamp für Kinder von 6 bis 12 Jahren in Münster.</p>
@@ -180,19 +139,19 @@
         </ul>
       </div>
       <div>
-        <p class="footer__title">Kontakt &amp; Rechtliches</p>
+        <p class="footer__title">Kontakt und Rechtliches</p>
         <ul class="footer__links">
           <li><a href="mailto:kontakt@freistil-kids.example"><span class="ph">[KONTAKT-E-MAIL]</span></a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
-          <li><a href="agb.html">AGB &amp; Stornobedingungen</a></li>
+          <li><a href="agb.html">AGB und Stornobedingungen</a></li>
           <li><button type="button" data-open-consent>Datenschutz-Einstellungen</button></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© <span data-year>2026</span> FREISTIL KIDS · Veranstalter: <span class="ph">[NAME DER UG]</span></span>
-      <span>Ohne Tracking. Mit viel Ballgefühl.</span>
+      <span>Ohne Tracking.</span>
     </div>
   </div>
 </footer>

@@ -93,6 +93,7 @@ In `index.html` steht vor dem FAQ ein auskommentierter Abschnitt „Echte Stimme
 ## Design-System (Kurzüberblick)
 
 - Farben (CSS-Variablen in `assets/css/styles.css`): Rasengrün `--green-900`, Sonnengold `--gold-500`, Sand `--sand-100`, Fast-Schwarz `--ink-900`
-- Schriften: **Anton** für Headlines und **Inter** für Fließtext. Beide sind lokal unter `assets/fonts/` eingebunden (SIL Open Font License, siehe `OFL-*.txt`), es gibt keine Anfragen an Google.
+- Schriften: **Anton** für Headlines und **Barlow** für Fließtext. Beide sind lokal unter `assets/fonts/` eingebunden (SIL Open Font License, siehe `OFL-*.txt`), es gibt keine Anfragen an Google.
+- Gestaltungsregeln (v2): Karten und Fotos höchstens 8 px Eckenradius, Buttons 6 px, Rahmen statt Schatten, kein Glass, kein Glow, kein Hover-Hüpfen. Scroll-Einblenden (`.reveal`) nur bei großen Fotos und Hauptblöcken. Eine Ausnahme: Der Hero ist auf Wunsch unverändert im früheren Stil (eigener, abgegrenzter CSS-Block „Hero“ in `styles.css`).
 - Header, Footer und Icons sind in jeder Seite enthalten. Bei Änderungen an der Navigation müssen alle Seiten angepasst werden.
 - Animationen sind dezent und werden bei „Bewegung reduzieren“ (prefers-reduced-motion) automatisch abgeschaltet.
