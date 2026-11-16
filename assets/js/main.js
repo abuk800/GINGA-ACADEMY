@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FREISTIL KIDS – Seitenlogik (ohne Abhängigkeiten, ohne Tracking)
+   DarePlay Academy – Seitenlogik (ohne Abhängigkeiten, ohne Tracking)
    ========================================================================== */
 (function () {
   'use strict';
@@ -380,6 +380,7 @@
         fillSummary($('#reg-summary'), [
           ['Referenz', regRef],
           ['Kind', (data.kind_vorname || '') + ' ' + (data.kind_nachname || '') + (data.kind_alter ? ' (' + data.kind_alter + ' J.)' : '')],
+          ['Trikotgröße', data.trikotgroesse],
           ['Elternteil', (data.eltern_vorname || '') + ' ' + (data.eltern_nachname || '')],
           ['E-Mail', data.eltern_email],
           ['Gutschein', data.gutscheincode],
@@ -428,12 +429,12 @@
     liveValidation(vForm);
     var qtyInput = $('#anzahl', vForm);
     var totalEl = $('[data-total]');
-    var price = Number(C.price) || 149;
-    var fmt = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    var price = root.classList.contains('xmas-over') ? (Number(C.priceRegular) || 159.95) : (Number(C.price) || 149.95);
+    var fmt = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2, maximumFractionDigits: 2 });
     function updateTotal() {
       var q = Math.min(10, Math.max(1, parseInt(qtyInput.value, 10) || 1));
       qtyInput.value = q;
-      if (totalEl) totalEl.textContent = fmt.format(q * price);
+      if (totalEl) totalEl.textContent = fmt.format(Math.round(q * price * 100) / 100);
       return q;
     }
     $$('[data-qty]', vForm).forEach(function (b) {
@@ -451,7 +452,7 @@
       if (!validate(vForm)) { alertBox(vForm, 'Bitte prüft die markierten Felder.'); return; }
       var data = collect(vForm);
       data.anzahl = updateTotal();
-      data.betrag_eur = data.anzahl * price;
+      data.betrag_eur = Math.round(data.anzahl * price * 100) / 100;
       data.referenz = makeRef('GS');
       data.zeitpunkt = new Date().toISOString();
       var btn = $('button[type="submit"]', vForm);
@@ -479,5 +480,5 @@
 
   FSK.version = '1.0.0';
   FSK.isDemo = !(C.endpoints && (C.endpoints.anmeldung || C.endpoints.gutschein));
-  if (FSK.isDemo && window.console) console.info('FREISTIL KIDS: ' + DEMO + ' – Formulare senden noch keine Daten (siehe assets/js/config.js).');
+  if (FSK.isDemo && window.console) console.info('DarePlay Academy: ' + DEMO + ' – Formulare senden noch keine Daten (siehe assets/js/config.js).');
 })();

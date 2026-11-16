@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FREISTIL KIDS – Design-System (v2)
+   DarePlay Academy – Design-System (v2)
    Mobile first · Schriften lokal · flache Flächen, wenig Dekoration
    Regeln: Radius max. 8px, Buttons 6px, Rahmen ODER Schatten (hier: Rahmen),
    kein Glass, kein Glow, kein Hover-Hüpfen, Bewegung nur bei Fotos/Hauptblöcken.
@@ -633,7 +633,7 @@ html:not(.js) .sticky-cta { transform: none; }
 .fieldset legend, .fieldset__title { display: block; width: 100%; font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: 1.625rem; line-height: 1.1; color: var(--green-900); padding: 0 0 0.6rem; margin-bottom: 1.1rem; border-bottom: 2px solid var(--ink-900); }
 .fields { display: grid; gap: 1.1rem; }
 @media (min-width: 600px) { .fields--2 { grid-template-columns: 1fr 1fr; } }
-.field { display: grid; gap: 0.4rem; }
+.field { display: grid; gap: 0.4rem; align-content: start; }
 .field label, .field .field__label { font-weight: 700; font-size: 1rem; }
 .field .opt { font-weight: 500; color: var(--ink-500); }
 .field__hint { font-size: 0.9375rem; color: var(--ink-500); margin: 0; }
@@ -710,3 +710,6 @@ html:not(.js) .sticky-cta { transform: none; }
 
 /* Einspaltige Listen (Vergleich auf Über uns) */
 .defs--plain li { display: block; }
+
+.schedule__info strong { color: var(--on-dark); }
+@media (min-width: 640px) { .row--gift { grid-template-columns: 17rem 1fr; } }

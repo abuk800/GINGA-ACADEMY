@@ -1,6 +1,6 @@
-# FREISTIL KIDS – Website
+# DarePlay Academy – Website
 
-Website für **FREISTIL KIDS**, das Fußballcamp für Kinder von 6 bis 12 Jahren in Münster (Osterferien 2027, FC Münster 05).
+Website für **DarePlay Academy**, das Fußballcamp für Kinder von 6 bis 12 Jahren in Münster (22.–25.03.2027, Sportanlage Arnheimweg, Arnheimweg 40, 48161 Münster).
 Ziel: Camp-Plätze und Weihnachtsgutscheine verkaufen und die Marke für die nächsten Jahre aufbauen.
 
 **Technik:** reine statische Website (HTML, CSS, etwas Vanilla-JavaScript). Kein Build-Schritt, keine Abhängigkeiten,
@@ -11,9 +11,9 @@ keine externen Anfragen. Läuft auf jedem Webspace und jedem Static-Hoster (Netl
 | Datei | Inhalt |
 |---|---|
 | `index.html` | Startseite: Weihnachts-Banner, Hero, Vertrauensleiste, Problem, Philosophie, Skillset & Mindset, Bundesliga-Besuch (Spielerkarten), Ablauf, Paket, Team, Sicherheit, Weihnachtsaktion, Preis, FAQ, Abschluss |
-| `ueber-uns.html` | Wer wir sind, Mission, Vergleich, der brasilianische Gedanke, Vision, Team |
+| `ueber-uns.html` | Wer wir sind, Mission, Vergleich, Fußball wie auf dem Bolzplatz, Vision, Team |
 | `anmeldung.html` | Anmeldung in 3 Schritten (Anmeldung → weitere Angaben → Bestätigung), wird automatisch zur Warteliste |
-| `gutschein.html` | Gutschein-Kauf (149 € pro Gutschein, Name optional, Widmung) |
+| `gutschein.html` | Gutschein-Kauf (Weihnachtspreis 149,95 € bis 15.01.2027, danach 159,95 €, Name optional, Widmung) |
 | `impressum.html`, `datenschutz.html`, `agb.html` | Rechtstexte (Platzhalter mit Gliederung, `agb.html#storno` = Stornobedingungen) |
 | `flyer/index.html` | Landing-URL für den QR-Code: `/flyer` → Startseite mit Fokus auf Preis & Anmeldung |
 | `404.html` | Fehlerseite |
@@ -30,7 +30,7 @@ Dann <http://localhost:8000> öffnen.
 
 Alles, was sich ändern kann, steht an einer Stelle:
 
-- `christmasEnd`: Ende der Weihnachtsaktion. Danach verschwinden Banner, Weihnachts-Abschnitt und „Weihnachtsangebot“-Hinweise automatisch, und an ihrer Stelle erscheint `[REGULÄRER PREIS]` (Elemente mit `data-xmas` / `data-after-xmas`).
+- `christmasEnd`: Ende des Weihnachtspreises (15.01.2027). Danach verschwinden Banner, Weihnachts-Abschnitt und Weihnachtspreis-Hinweise automatisch, und überall gilt `priceRegular` (159,95 €). Preise stehen in `price` (149,95 €) und `priceRegular` (159,95 €) und steuern auch die Gutschein-Summe. Texte mit Preis stehen zusätzlich im HTML (Suche nach `149,95`).
 - `freeSpots`: Zahl der freien Plätze. **Nur eintragen, wenn sie echt und aktuell ist.** Bei `null` wird nichts angezeigt.
 - `bookedOut: true`: Das Camp ist ausgebucht. Alle Buttons werden zu „Auf die Warteliste“, die Anmeldung wird zur Warteliste (ohne Zahlungsart).
 - `endpoints`: Wohin die Formulare senden (POST, JSON). Bei `null` läuft der **Demo-Modus**: Die Formulare funktionieren, senden aber nichts, und ein gelber Hinweis ist sichtbar.
@@ -55,23 +55,24 @@ So zählt ihr Flyer-Anmeldungen direkt in den Formulardaten, ohne Cookies und oh
 Alle Platzhalter sind auf der Seite gelb und gestrichelt markiert. Im Code findet ihr sie über die Suche nach `class="ph"`.
 
 **Entwurfsmodus:** Auf jeder Seite steht `<html lang="de" class="is-draft">`. Solange `is-draft` gesetzt ist, sind auch **unbestätigte**
-Vertrauensmerkmale sichtbar (mit dem Hinweis „unbestätigt“). Das betrifft Elemente mit `data-pending`: Trainer-Merkmal, Gruppengröße, Erste Hilfe,
+Vertrauensmerkmale sichtbar (mit dem Hinweis „unbestätigt“). Das betrifft Elemente mit `data-pending`: Erste Hilfe,
 Führungszeugnis und Versicherung. Wird `is-draft` entfernt, verschwinden diese Punkte automatisch. Bestätigte Punkte bekommen den Platzhalter-Text
 ersetzt und `data-pending` entfernt.
 
 Noch offen:
 
 - **Veranstalter & Kontakt:** `[NAME DER UG]`, `[KONTAKT-E-MAIL]` (auch `mailto:`-Links anpassen), `[TELEFON]`, Instagram `[@HANDLE]` (Link in `index.html`)
-- **Camp:** `[ADRESSE]`, `[UHRZEITEN]` / `[UHRZEIT]` (Tagesablauf), `[TAG 1–4]` (Programm), `[Details zur Verpflegung]`, `[ANFAHRT & PARKEN]`, `[AUSWEICHPLAN]` bei Unwetter
-- **Preis:** `[REGULÄRER PREIS]` / `[PREIS]`. Freie Plätze (`[ANZAHL PLÄTZE]`) werden über `freeSpots` in `config.js` gesteuert.
-- **Geschenk:** `[Details zu den Tickets folgen]`
+- **Camp:** `[TAG 1–4]` (Programminhalte der Camptage), `[ANFAHRT & PARKEN]`, `[AUSWEICHPLAN]` bei Unwetter, `[Betrag]` für die Frühbetreuung (Aufpreis), Größentabelle fürs Trikot
+- **Preis:** Weihnachtspreis 149,95 € bis 15.01.2027, danach 159,95 € (eingetragen). Freie Plätze (`[ANZAHL PLÄTZE]`) werden über `freeSpots` in `config.js` gesteuert.
+- **Paket:** Ball und Urkunde sind in `index.html` als „unbestätigt“ markiert (`data-pending`). Bitte bestätigen oder streichen. Das Überraschungspaket enthält laut Veranstalter ein Trikot bzw. Oberteil, die Größe wird bei der Anmeldung abgefragt.
+- **Kontakt:** `[KONTAKT-E-MAIL]`, Telefonnummern der Ansprechpartner (u. a. Michi Köhn) und Instagram `[@HANDLE]`
 - **Bundesliga-Besuch:** Derrick Köhns Foto (`assets/img/derrick-koehn.webp`) ist nur 195×256 px groß und wurde 2× hochskaliert. Für scharfe Karten bitte eine größere Version als freigestelltes PNG/WebP austauschen. Dazu `[Tag & Uhrzeit der Besuche]`. Weitere Gäste: eine `fut--tba`-Karte in `index.html` durch eine Karte wie die von Derrick ersetzen (siehe Kommentar im HTML).
 - **Team:** `[Rolle]`, Haltungssatz und Kurzvorstellung für Kevin Atakora und Michi Köhn. Die vorgeschlagenen Sätze sind nur Beispiele und müssen freigegeben werden. Dazu Fotos.
-- **Sicherheit:** Gruppengröße, Erste Hilfe, erweitertes Führungszeugnis, Versicherung. Nur bestätigte Punkte zeigen.
+- **Sicherheit:** Bestätigt sind DFB-lizenzierte Trainer und Kleingruppen. Noch offen: Erste Hilfe, erweitertes Führungszeugnis, Versicherung. Nur bestätigte Punkte zeigen.
 - **Gutschein:** Gültigkeit, Regelung bei ausgebuchtem Camp, Versandzeitpunkt des PDFs
 - **Anmeldung:** Zahlungsarten, Kanäle für Foto-Veröffentlichung, Trikot-Größentabelle
 - **Rechtstexte:** Impressum, Datenschutz, AGB & Stornobedingungen kommen vom Veranstalter (rechtlich prüfen lassen, insbesondere Widerrufsrecht und Einwilligungen für Fotos von Minderjährigen)
-- **Domain:** `https://freistil-kids.example` in allen Dateien ersetzen (Canonical-Links, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `flyer/index.html`)
+- **Domain:** `https://dareplay-academy.example` in allen Dateien ersetzen (Canonical-Links, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `flyer/index.html`)
 
 ### Fotos einsetzen
 

@@ -1,16 +1,17 @@
 /*
- * FREISTIL KIDS – zentrale Einstellungen
+ * DarePlay Academy – zentrale Einstellungen
  * ---------------------------------------
  * Diese Datei wird im <head> jeder Seite synchron geladen (sehr klein),
  * damit z. B. die Weihnachtsaktion ohne Flackern ein- bzw. ausgeblendet wird.
  * Alle Werte hier anpassen – nicht im HTML.
  */
 window.FSK_CONFIG = {
-  /* Ende der Weihnachtsaktion (Banner + Weihnachts-Abschnitt verschwinden danach automatisch) */
-  christmasEnd: '2026-12-24T23:59:59+01:00',
+  /* Ende des Weihnachtspreises (Banner, Weihnachts-Abschnitt und Weihnachtspreis verschwinden danach automatisch) */
+  christmasEnd: '2027-01-15T23:59:59+01:00',
 
-  /* Preis in Euro (Weihnachtsangebot) */
-  price: 149,
+  /* Preise in Euro: Weihnachtspreis bis christmasEnd, danach priceRegular */
+  price: 149.95,
+  priceRegular: 159.95,
 
   /*
    * Freie Plätze: NUR eintragen, wenn die Zahl echt und aktuell ist.

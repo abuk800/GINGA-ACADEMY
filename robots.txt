@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /flyer/
 
-Sitemap: https://freistil-kids.example/sitemap.xml
+Sitemap: https://dareplay-academy.example/sitemap.xml
