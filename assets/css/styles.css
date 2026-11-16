@@ -713,3 +713,8 @@ html:not(.js) .sticky-cta { transform: none; }
 
 .schedule__info strong { color: var(--on-dark); }
 @media (min-width: 640px) { .row--gift { grid-template-columns: 17rem 1fr; } }
+
+/* Logo (Bildmarke von DarePlay Academy) */
+.logo img { display: block; height: 48px; width: auto; }
+@media (min-width: 1000px) { .logo img { height: 58px; } }
+.site-footer .logo img { height: 76px; }

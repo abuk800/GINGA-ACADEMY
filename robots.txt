@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /flyer/
 
-Sitemap: https://dareplay-academy.example/sitemap.xml
+Sitemap: https://dareplay.de/sitemap.xml

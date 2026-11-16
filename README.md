@@ -65,14 +65,14 @@ Noch offen:
 - **Camp:** `[TAG 1–4]` (Programminhalte der Camptage), `[ANFAHRT & PARKEN]`, `[AUSWEICHPLAN]` bei Unwetter, `[Betrag]` für die Frühbetreuung (Aufpreis), Größentabelle fürs Trikot
 - **Preis:** Weihnachtspreis 149,95 € bis 15.01.2027, danach 159,95 € (eingetragen). Freie Plätze (`[ANZAHL PLÄTZE]`) werden über `freeSpots` in `config.js` gesteuert.
 - **Paket:** Ball und Urkunde sind in `index.html` als „unbestätigt“ markiert (`data-pending`). Bitte bestätigen oder streichen. Das Überraschungspaket enthält laut Veranstalter ein Trikot bzw. Oberteil, die Größe wird bei der Anmeldung abgefragt.
-- **Kontakt:** `[KONTAKT-E-MAIL]`, Telefonnummern der Ansprechpartner (u. a. Michi Köhn) und Instagram `[@HANDLE]`
+- **Kontakt:** E-Mail support@DarePlay.de, Telefon Kevin Atakora +49 174 3174781 und Michi Köhn +49 15563 087425 sind eingetragen (Footer, Abschluss-Bereich, FAQ, Impressum). Noch offen: Instagram `[@HANDLE]`
 - **Bundesliga-Besuch:** Derrick Köhns Foto (`assets/img/derrick-koehn.webp`) ist nur 195×256 px groß und wurde 2× hochskaliert. Für scharfe Karten bitte eine größere Version als freigestelltes PNG/WebP austauschen. Dazu `[Tag & Uhrzeit der Besuche]`. Weitere Gäste: eine `fut--tba`-Karte in `index.html` durch eine Karte wie die von Derrick ersetzen (siehe Kommentar im HTML).
 - **Team:** `[Rolle]`, Haltungssatz und Kurzvorstellung für Kevin Atakora und Michi Köhn. Die vorgeschlagenen Sätze sind nur Beispiele und müssen freigegeben werden. Dazu Fotos.
 - **Sicherheit:** Bestätigt sind DFB-lizenzierte Trainer und Kleingruppen. Noch offen: Erste Hilfe, erweitertes Führungszeugnis, Versicherung. Nur bestätigte Punkte zeigen.
 - **Gutschein:** Gültigkeit, Regelung bei ausgebuchtem Camp, Versandzeitpunkt des PDFs
 - **Anmeldung:** Zahlungsarten, Kanäle für Foto-Veröffentlichung, Trikot-Größentabelle
 - **Rechtstexte:** Impressum, Datenschutz, AGB & Stornobedingungen kommen vom Veranstalter (rechtlich prüfen lassen, insbesondere Widerrufsrecht und Einwilligungen für Fotos von Minderjährigen)
-- **Domain:** `https://dareplay-academy.example` in allen Dateien ersetzen (Canonical-Links, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `flyer/index.html`)
+- **Domain:** `https://dareplay.de` ist als Adresse eingetragen (Canonical-Links, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `flyer/index.html`). Die Domain muss noch mit dem Hosting verbunden werden. Ändert sich die Adresse, überall ersetzen (Canonical-Links, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`, `flyer/index.html`)
 
 ### Fotos einsetzen
 
