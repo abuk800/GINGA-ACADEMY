@@ -719,3 +719,17 @@ html:not(.js) .sticky-cta { transform: none; }
 .logo img { display: block; height: 48px; width: auto; }
 @media (min-width: 1000px) { .logo img { height: 58px; } }
 .site-footer .logo img { height: 76px; }
+
+/* Mission */
+.mission__body { margin-top: clamp(2.5rem, 2rem + 3vw, 4.5rem); align-items: start; }
+.mission__figure { margin: 0; max-width: 420px; }
+.mission__figure .photo-ph { aspect-ratio: 4 / 3; background: #e0d8c3; }
+@media (min-width: 900px) { .mission__figure .photo-ph { aspect-ratio: 4 / 5; } }
+.mission__figure figcaption { margin-top: 0.75rem; font-weight: 600; font-size: 1rem; color: var(--ink-700); }
+.mission__text .lead { color: var(--ink-900); font-weight: 500; }
+.mission__sub { margin: 2.25rem 0 0.75rem; font-size: clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem); }
+.mission .rows, .mission__text .rows { border-top-color: var(--ink-900); }
+.mission__text .row { border-bottom-color: var(--sand-line); }
+.mission__more { margin-top: 1.5rem; }
+.mission__more a { font-weight: 700; color: var(--green-700); }
+.mission__hl { color: var(--green-700); }

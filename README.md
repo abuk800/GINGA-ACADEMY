@@ -68,6 +68,7 @@ Noch offen:
 - **Kontakt:** E-Mail support@DarePlay.de, Telefon Kevin Atakora +49 174 3174781 und Michi Köhn +49 15563 087425 sind eingetragen (Footer, Abschluss-Bereich, FAQ, Impressum). Noch offen: Instagram `[@HANDLE]`
 - **Bundesliga-Besuch:** Derrick Köhns Foto (`assets/img/derrick-koehn.webp`) ist nur 195×256 px groß und wurde 2× hochskaliert. Für scharfe Karten bitte eine größere Version als freigestelltes PNG/WebP austauschen. Dazu `[Tag & Uhrzeit der Besuche]`. Weitere Gäste: eine `fut--tba`-Karte in `index.html` durch eine Karte wie die von Derrick ersetzen (siehe Kommentar im HTML).
 - **Team:** `[Rolle]`, Haltungssatz und Kurzvorstellung für Kevin Atakora und Michi Köhn. Die vorgeschlagenen Sätze sind nur Beispiele und müssen freigegeben werden. Dazu Fotos.
+- **Mission (Kevins Geschichte):** In `index.html` und `ueber-uns.html` (Abschnitt „Unsere Mission“). Der Absatz über Kevins Beobachtung ist ein Textvorschlag und als `data-pending` markiert: Er verschwindet beim Livegang (ohne `is-draft`), bis Kevin ihn bestätigt oder angepasst hat. Außerdem fehlt das Foto von Kevin (Datei `assets/img/kevin-atakora.webp`).
 - **Sicherheit:** Bestätigt sind DFB-lizenzierte Trainer und Kleingruppen. Noch offen: Erste Hilfe, erweitertes Führungszeugnis, Versicherung. Nur bestätigte Punkte zeigen.
 - **Gutschein:** Gültigkeit, Regelung bei ausgebuchtem Camp, Versandzeitpunkt des PDFs
 - **Anmeldung:** Zahlungsarten, Kanäle für Foto-Veröffentlichung, Trikot-Größentabelle
