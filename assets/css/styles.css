@@ -456,7 +456,7 @@ html:not(.xmas-over) [data-after-xmas] { display: none !important; }
    Team
    ========================================================================== */
 .team { display: grid; gap: 2.5rem clamp(1.5rem, 4vw, 3rem); }
-@media (min-width: 700px) { .team { grid-template-columns: repeat(2, minmax(0, 340px)); } }
+@media (min-width: 700px) { .team { grid-template-columns: repeat(2, minmax(0, 400px)); } }
 .coach__photo { aspect-ratio: 1 / 1; margin-bottom: 1rem; }
 .coach__name { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem); line-height: 1; margin: 0 0 0.35rem; }
 .coach__role { font-weight: 700; margin-bottom: 0.6rem; }
@@ -733,3 +733,20 @@ html:not(.js) .sticky-cta { transform: none; }
 .mission__more { margin-top: 1.5rem; }
 .mission__more a { font-weight: 700; color: var(--green-700); }
 .mission__hl { color: var(--green-700); }
+
+/* Über uns: Kevins Geschichte */
+.origin p { font-size: 1.1875rem; color: var(--ink-700); max-width: 34em; }
+.origin .origin__lead { font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); font-weight: 700; color: var(--ink-900); line-height: 1.3; }
+.origin .origin__moment { margin: 1.75rem 0; font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem); font-weight: 700; color: var(--ink-900); line-height: 1.35; }
+.origin .origin__close { margin-top: 1.75rem; font-weight: 700; color: var(--green-700); font-size: 1.375rem; }
+.why .h2 { margin-bottom: 1.5rem; }
+.why__quote { margin: 0 0 1.5rem; font-size: clamp(2.5rem, 1.5rem + 4.4vw, 4.75rem); line-height: 1; color: var(--gold-500); }
+.why p:not(.why__quote) { font-size: var(--fs-lg); color: var(--on-dark-muted); max-width: 30em; }
+.why__photo { display: block; width: 100%; max-width: 440px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; border-radius: var(--radius); justify-self: end; }
+.who__bond { margin: clamp(2.5rem, 2rem + 3vw, 4rem) 0 0; max-width: 26em; font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem); line-height: 1.25; font-weight: 500; }
+.who__bond strong { font-weight: 700; }
+.coach p:not(.coach__role):not(.coach__quote) { margin-bottom: 0.75rem; color: var(--ink-700); }
+.future__text { margin: 0; max-width: 34em; font-size: clamp(1.25rem, 1.05rem + 1vw, 1.75rem); line-height: 1.4; font-weight: 500; }
+.parents__text { font-size: var(--fs-lg); color: var(--on-dark-muted); max-width: 32em; }
+.parents .h2 { margin-bottom: 1.25rem; }
+.signoff { margin: 1.75rem 0 2rem; font-size: clamp(2.25rem, 1.5rem + 3vw, 3.75rem); line-height: 1; color: var(--gold-500); }

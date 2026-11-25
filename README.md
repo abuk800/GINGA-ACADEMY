@@ -11,7 +11,7 @@ keine externen Anfragen. Läuft auf jedem Webspace und jedem Static-Hoster (Netl
 | Datei | Inhalt |
 |---|---|
 | `index.html` | Startseite: Weihnachts-Banner, Hero, Vertrauensleiste, Problem, Philosophie, Skillset & Mindset, Bundesliga-Besuch (Spielerkarten), Ablauf, Paket, Team, Sicherheit, Weihnachtsaktion, Preis, FAQ, Abschluss |
-| `ueber-uns.html` | Wer wir sind, Mission, Vergleich, Fußball wie auf dem Bolzplatz, Vision, Team |
+| `ueber-uns.html` | Hinter DarePlay steht ein Vater (Kevins Geschichte), Warum DarePlay, Wer wir sind, Wohin wir wollen, Wort an die Eltern |
 | `anmeldung.html` | Anmeldung in 3 Schritten (Anmeldung → weitere Angaben → Bestätigung), wird automatisch zur Warteliste |
 | `gutschein.html` | Gutschein-Kauf (Weihnachtspreis 149,95 € bis 15.01.2027, danach 159,95 €, Name optional, Widmung) |
 | `impressum.html`, `datenschutz.html`, `agb.html` | Rechtstexte (Platzhalter mit Gliederung, `agb.html#storno` = Stornobedingungen) |
@@ -68,7 +68,7 @@ Noch offen:
 - **Kontakt:** E-Mail support@DarePlay.de, Telefon Kevin Atakora +49 174 3174781 und Michi Köhn +49 15563 087425 sind eingetragen (Footer, Abschluss-Bereich, FAQ, Impressum). Noch offen: Instagram `[@HANDLE]`
 - **Bundesliga-Besuch:** Derrick Köhns Foto (`assets/img/derrick-koehn.webp`) ist nur 195×256 px groß und wurde 2× hochskaliert. Für scharfe Karten bitte eine größere Version als freigestelltes PNG/WebP austauschen. Dazu `[Tag & Uhrzeit der Besuche]`. Weitere Gäste: eine `fut--tba`-Karte in `index.html` durch eine Karte wie die von Derrick ersetzen (siehe Kommentar im HTML).
 - **Team:** `[Rolle]`, Haltungssatz und Kurzvorstellung für Kevin Atakora und Michi Köhn. Die vorgeschlagenen Sätze sind nur Beispiele und müssen freigegeben werden. Dazu Fotos.
-- **Mission (Kevins Geschichte):** In `index.html` und `ueber-uns.html` (Abschnitt „Unsere Mission“). Der Absatz über Kevins Beobachtung ist ein Textvorschlag und als `data-pending` markiert: Er verschwindet beim Livegang (ohne `is-draft`), bis Kevin ihn bestätigt oder angepasst hat. Außerdem fehlt das Foto von Kevin (Datei `assets/img/kevin-atakora.webp`).
+- **Über uns und Mission:** Kevins Geschichte stammt aus dem Text des Veranstalters. Offen sind die markierten Platzhalter in `ueber-uns.html`: der konkrete Moment mit dem Sohn, der Fußballweg von Kevin und Michi (Verein, seit wann Trainer, Lizenz), je ein persönlicher Satz und die Fotos (`assets/img/kevin-atakora.webp`, `michi-koehn.webp`). Der Sohn ist im Text neun Jahre alt, entsprechend auch im Abschnitt „Unsere Mission“ auf der Startseite.
 - **Sicherheit:** Bestätigt sind DFB-lizenzierte Trainer und Kleingruppen. Noch offen: Erste Hilfe, erweitertes Führungszeugnis, Versicherung. Nur bestätigte Punkte zeigen.
 - **Gutschein:** Gültigkeit, Regelung bei ausgebuchtem Camp, Versandzeitpunkt des PDFs
 - **Anmeldung:** Zahlungsarten, Kanäle für Foto-Veröffentlichung, Trikot-Größentabelle
